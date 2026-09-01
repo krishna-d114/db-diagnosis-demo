@@ -1,0 +1,14 @@
+QUERY PLAN
+Limit  (cost=18173.80..18176.10 rows=20 width=24) (actual time=101.099..106.584 rows=20 loops=1)
+"  ->  Gather Merge  (cost=18173.80..18244.06 rows=611 width=24) (actual time=101.098..106.580 rows=20 loops=1)"
+"        Workers Planned: 1"
+"        Workers Launched: 1"
+"        ->  Sort  (cost=17173.79..17175.32 rows=611 width=24) (actual time=94.158..94.161 rows=16 loops=2)"
+"              Sort Key: created_at DESC"
+"              Sort Method: top-N heapsort  Memory: 27kB"
+"              Worker 0:  Sort Method: top-N heapsort  Memory: 27kB"
+"              ->  Parallel Seq Scan on posts  (cost=0.00..17157.53 rows=611 width=24) (actual time=0.475..93.830 rows=498 loops=2)"
+"                    Filter: ((campaign_id = 7) AND (status = 'pending'::text))"
+"                    Rows Removed by Filter: 499502"
+Planning Time: 0.309 ms
+Execution Time: 106.677 ms
