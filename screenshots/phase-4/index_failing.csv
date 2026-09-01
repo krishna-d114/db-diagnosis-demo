@@ -1,0 +1,6 @@
+QUERY PLAN
+Seq Scan on creators  (cost=0.00..1068.00 rows=250 width=17) (actual time=0.126..33.110 rows=1 loops=1)
+"  Filter: (lower(handle) = 'creator_42'::text)"
+"  Rows Removed by Filter: 49999"
+Planning Time: 0.391 ms
+Execution Time: 33.201 ms

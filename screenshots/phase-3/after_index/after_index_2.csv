@@ -1,0 +1,6 @@
+QUERY PLAN
+Limit  (cost=0.42..21.67 rows=20 width=24) (actual time=0.104..0.186 rows=20 loops=1)
+"  ->  Index Scan using idx_posts_campaign_status on posts  (cost=0.42..1104.34 rows=1039 width=24) (actual time=0.103..0.183 rows=20 loops=1)"
+"        Index Cond: ((campaign_id = 7) AND (status = 'pending'::text))"
+Planning Time: 0.369 ms
+Execution Time: 0.239 ms

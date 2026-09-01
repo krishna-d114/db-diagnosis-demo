@@ -1,0 +1,5 @@
+QUERY PLAN
+Index Scan using idx_creators_handle on creators  (cost=0.29..2.51 rows=1 width=17) (actual time=0.586..0.587 rows=1 loops=1)
+"  Index Cond: (handle = 'creator_42'::text)"
+Planning Time: 1.712 ms
+Execution Time: 0.660 ms
