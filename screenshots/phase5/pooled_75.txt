@@ -1,0 +1,82 @@
+
+krishnasurya@chavakulas-MacBook-Pro db-diagnosis-demo % node scripts/hold.js 75 pooled
+
+◇ injected env (3) from .env // tip: ⌘ enable debugging { debug: true }
+46: connected
+26: connected
+28: connected
+5: connected
+51: connected
+29: connected
+43: connected
+4: connected
+0: connected
+25: connected
+35: connected
+15: connected
+32: connected
+41: connected
+22: connected
+9: connected
+7: connected
+67: connected
+17: connected
+13: connected
+1: connected
+23: connected
+36: connected
+24: connected
+2: connected
+33: connected
+11: connected
+61: connected
+54: connected
+53: connected
+49: connected
+55: connected
+69: connected
+70: connected
+18: connected
+21: connected
+40: connected
+64: connected
+73: connected
+71: connected
+57: connected
+12: connected
+16: connected
+39: connected
+27: connected
+62: connected
+63: connected
+52: connected
+59: connected
+58: connected
+68: connected
+44: connected
+38: connected
+30: connected
+14: connected
+74: connected
+34: connected
+37: connected
+47: connected
+56: connected
+42: connected
+45: connected
+8: connected
+20: connected
+31: connected
+10: connected
+66: connected
+72: connected
+19: connected
+65: connected
+60: connected
+50: connected
+3: connected
+6: connected
+48: connected
+
+clients: 75 | connected: 75 | failed: 0
+SERVER-SIDE CONNECTIONS: 17

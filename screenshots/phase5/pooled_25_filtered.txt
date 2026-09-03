@@ -1,0 +1,31 @@
+krishnasurya@chavakulas-MacBook-Pro db-diagnosis-demo % node scripts/hold.js 25 pooled
+
+◇ injected env (3) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+1: connected
+3: connected
+7: connected
+22: connected
+23: connected
+24: connected
+8: connected
+9: connected
+10: connected
+5: connected
+6: connected
+16: connected
+12: connected
+20: connected
+17: connected
+21: connected
+18: connected
+14: connected
+19: connected
+4: connected
+11: connected
+2: connected
+15: connected
+0: connected
+13: connected
+
+clients: 25 | connected: 25 | failed: 0
+SERVER-SIDE CONNECTIONS: 14

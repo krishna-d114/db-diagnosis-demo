@@ -1,0 +1,81 @@
+
+krishnasurya@chavakulas-MacBook-Pro db-diagnosis-demo % node scripts/hold.js 75 direct 
+◇ injected env (3) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+55: FAILED — sorry, too many clients already
+66: FAILED — sorry, too many clients already
+52: FAILED — sorry, too many clients already
+24: FAILED — sorry, too many clients already
+25: FAILED — sorry, too many clients already
+34: FAILED — sorry, too many clients already
+33: FAILED — sorry, too many clients already
+41: FAILED — sorry, too many clients already
+49: FAILED — sorry, too many clients already
+70: FAILED — sorry, too many clients already
+74: FAILED — sorry, too many clients already
+72: FAILED — sorry, too many clients already
+69: FAILED — sorry, too many clients already
+58: FAILED — sorry, too many clients already
+71: FAILED — sorry, too many clients already
+73: FAILED — sorry, too many clients already
+67: FAILED — sorry, too many clients already
+68: FAILED — sorry, too many clients already
+29: FAILED — sorry, too many clients already
+5: FAILED — remaining connection slots are reserved for roles with the SUPERUSER attribute
+3: FAILED — remaining connection slots are reserved for roles with the SUPERUSER attribute
+6: FAILED — remaining connection slots are reserved for roles with the SUPERUSER attribute
+14: connected
+0: connected
+9: connected
+12: connected
+28: connected
+16: connected
+22: connected
+39: connected
+11: connected
+31: connected
+1: connected
+7: connected
+43: connected
+17: connected
+26: connected
+10: connected
+20: connected
+13: connected
+48: connected
+2: connected
+47: connected
+36: connected
+51: connected
+32: connected
+40: connected
+35: connected
+27: connected
+23: connected
+4: connected
+15: connected
+21: connected
+8: connected
+64: connected
+42: connected
+56: connected
+45: connected
+18: connected
+57: connected
+59: connected
+44: connected
+53: connected
+30: connected
+61: connected
+50: connected
+38: connected
+46: connected
+65: connected
+62: connected
+60: connected
+54: connected
+63: connected
+37: connected
+19: connected
+
+clients: 75 | connected: 53 | failed: 22
+MONITOR LOCKED OUT TOO: remaining connection slots are reserved for roles with the SUPERUSER attribute
