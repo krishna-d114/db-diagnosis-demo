@@ -1,0 +1,5 @@
+
+krishnasurya@chavakulas-MacBook-Pro db-diagnosis-demo % dig +short db.wagugrpepvmmpeqjdrpe.supabase.co A   
+
+krishnasurya@chavakulas-MacBook-Pro db-diagnosis-demo % dig +short db.wagugrpepvmmpeqjdrpe.supabase.co AAAA
+2406:da18:1f5e:4101:bcef:1842:170e:3447
