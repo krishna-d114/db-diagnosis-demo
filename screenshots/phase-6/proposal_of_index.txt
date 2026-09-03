@@ -1,0 +1,57 @@
+
+krishnasurya@chavakulas-MacBook-Pro db-diagnosis-demo % node scripts/suggest.js   
+◇ injected env (3) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+examining top 10 read queries
+
+▶ SELECT e.name, n.nspname AS schema, e.default_version, x.extversion AS i…
+   calls=42 mean=251.3ms total=10553ms
+   IGNORE — pg_extension: full scan by design (no predicate)
+
+   IGNORE — pg_namespace: full scan by design (no predicate)
+
+▶ SELECT name FROM pg_timezone_names…
+   calls=6 mean=706.7ms total=4240ms
+   OK — no Seq Scans
+
+▶ SELECT id, creator_id, engagement FROM posts WHERE campaign_id = $1 AND …
+   calls=1 mean=2062.3ms total=2062ms
+   SEQ SCAN on posts — rows removed by filter: 500000
+   PROPOSE → CREATE INDEX idx_posts_campaign_id_status_created_at_DESC ON posts (campaign_id, status, created_at DESC);
+
+▶ SELECT case when pg_is_in_recovery() then $2 else (pg_walfile_name_offse…
+   calls=3 mean=182.6ms total=548ms
+   SKIP — can't replay params (invalid input syntax for type boolean: "a")
+
+▶ SELECT count(*) FROM posts limit $1…
+   calls=1 mean=279.3ms total=279ms
+   IGNORE — posts: full scan by design (no predicate)
+
+▶ SELECT labelfile, spcmapfile, lsn FROM pg_backup_stop($1)…
+   calls=3 mean=77.0ms total=231ms
+   SKIP — can't replay params (invalid input syntax for type boolean: "a")
+
+▶ SELECT * FROM creators WHERE lower(handle) = $1 limit $2…
+   calls=1 mean=194.4ms total=194ms
+   FLAG — expression predicate on creators: needs an EXPRESSION index → human review
+   (lower(handle) = '1'::text)
+
+▶ SELECT * FROM pgbouncer.get_auth($1)…
+   calls=91 mean=1.5ms total=132ms
+   SKIP — can't replay params (permission denied for function get_auth)
+
+▶ SELECT t.oid, t.typname, t.typsend, t.typreceive, t.typoutput, t.typinpu…
+   calls=10 mean=11.8ms total=118ms
+   IGNORE — pg_type too small
+
+   IGNORE — pg_range: full scan by design (no predicate)
+
+▶ select evt.oid, evt.evtname as name, evt.evtevent as event, case evt.evt…
+   calls=49 mean=1.7ms total=84ms
+   IGNORE — pg_event_trigger: full scan by design (no predicate)
+
+   IGNORE — pg_authid: full scan by design (no predicate)
+
+— — —
+CREATE INDEX idx_posts_campaign_id_status_created_at_DESC ON posts (campaign_id, status, created_at DESC);
+
+This tool never executes its proposals — write cost, locks, and selectivity are human judgment.
